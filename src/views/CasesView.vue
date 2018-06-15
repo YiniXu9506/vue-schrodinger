@@ -151,6 +151,9 @@
           <el-form-item label="Arg:" prop="args">
             <el-input v-model="caseForm.args"></el-input>
           </el-form-item>
+          <el-form-item label="Image Address:" prop="img_add">
+            <el-input v-model="caseForm.img_add"></el-input>
+          </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
           <el-button @click="dialogUpdateCaseTemplate = false; clearCaseForm()">Cancel</el-button>
