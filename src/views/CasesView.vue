@@ -94,8 +94,8 @@
           <el-form-item label="Args:" prop="args">
             <el-input v-model="caseForm.args"></el-input>
           </el-form-item>
-          <el-form-item label="Image Address:" prop="img_add">
-            <el-input v-model="caseForm.img_add"></el-input>
+          <el-form-item label="Image Address:" prop="image">
+            <el-input v-model="caseForm.image"></el-input>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
@@ -151,8 +151,8 @@
           <el-form-item label="Arg:" prop="args">
             <el-input v-model="caseForm.args"></el-input>
           </el-form-item>
-          <el-form-item label="Image Address:" prop="img_add">
-            <el-input v-model="caseForm.img_add"></el-input>
+          <el-form-item label="Image Address:" prop="image">
+            <el-input v-model="caseForm.image"></el-input>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
@@ -217,7 +217,7 @@
           git_repo: '',
           git_value: '',
           args: '',
-          img_add: ''
+          image: ''
         },
 
         rules: {
@@ -312,7 +312,7 @@
             git_repo: this.caseForm.git_repo,
             git_value: this.caseForm.git_value,
             url: this.caseForm.source_url,
-            image: this.caseForm.img_add
+            image: this.caseForm.image
           }
         }).then((result) => {
           console.log(result);
@@ -360,7 +360,7 @@
             git_repo: this.caseForm.git_repo,
             git_value: this.caseForm.git_value,
             url: this.caseForm.source_url,
-            image: this.caseFrom.img_add
+            image: this.caseForm.image
           }
         }).then((result) => {
           if (result.data.code != 200) {
@@ -475,7 +475,7 @@
           git_value: this.detail.source.git_value,
           args: this.detail.args,
           source_url: this.detail.source.url,
-          img_add: this.detail.img_add
+          image: this.detail.source.image
         };
         this.dialogUpdateCaseTemplate = true;
       },
@@ -497,7 +497,8 @@
           git_repo: '',
           git_value: '',
           args: '',
-          source_url: ''
+          source_url: '',
+          image: ''
         }
       }
     }
